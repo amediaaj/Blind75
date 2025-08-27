@@ -18,7 +18,7 @@ public class TwoSum extends Problem<TwoSumData> {
     }
 
     // LeetCode 1
-    private int[] twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
 
         // Loop over all elements
