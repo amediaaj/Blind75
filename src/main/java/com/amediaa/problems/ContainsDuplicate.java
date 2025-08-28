@@ -18,8 +18,8 @@ public class ContainsDuplicate extends Problem<ContainsDuplicateData>{
 
     private void solve() {
         ContainsDuplicateData data = testData[0];
-        int[] input = data.getNums();
-        boolean expected = data.isExpected();
+        int[] input = data.getInput();
+        boolean expected = data.getExpected();
         boolean output = containsDuplicate(input);
         System.out.printf("Input: %s Output: %s Expected: %s", Arrays.toString(input), output, expected);
     }
@@ -40,21 +40,9 @@ public class ContainsDuplicate extends Problem<ContainsDuplicateData>{
     }
 }
 
-class ContainsDuplicateData {
-    private int[] nums;
-    boolean expected;
-
+class ContainsDuplicateData extends ProblemData<int[], Boolean>{
     public ContainsDuplicateData(int[] nums, boolean expected) {
-        this.nums = nums;
-        this.expected = expected;
-    }
-
-    public int[] getNums() {
-        return nums;
-    }
-
-    public boolean isExpected() {
-        return expected;
+        super(nums, expected);
     }
 }
 
