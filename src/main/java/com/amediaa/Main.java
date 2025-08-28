@@ -1,9 +1,6 @@
 package com.amediaa;
 
-import com.amediaa.problems.BuySellStocks;
-import com.amediaa.problems.ContainsDuplicate;
-import com.amediaa.problems.ProductExceptSelf;
-import com.amediaa.problems.TwoSum;
+import com.amediaa.problems.*;
 
 public class Main {
 
@@ -15,6 +12,7 @@ public class Main {
         demo(new BuySellStocks());
         demo(new ContainsDuplicate());
         demo(new ProductExceptSelf());
+        demo(new MaxSubArray());
 
         // demo(new GenericsChallenge());
         // demo(new Comparables());
