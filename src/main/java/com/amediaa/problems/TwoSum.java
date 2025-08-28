@@ -3,16 +3,17 @@ package com.amediaa.problems;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSum extends Problem<int[], int[]> {
-
+public class TwoSum extends Problem<TwoSumInput, int[]> {
     public TwoSum() {
-        super(new int[] {1, 2}, new int[] {0, 1});
+        super(new TwoSumInput(
+                new int[] {1, 2},
+                3
+        ), new int[] {0, 1});
     }
 
     @Override
-    int[] solution(int[] input) {
-        // TODO: fix hardcoing of target argument
-        return twoSum(input, 3);
+    int[] solution(TwoSumInput input) {
+        return twoSum(input.getNums(), input.getTarget());
     }
 
     // LeetCode 1
@@ -39,4 +40,22 @@ public class TwoSum extends Problem<int[], int[]> {
         return new int[] {0, 0};
     }
 }
+
+    class TwoSumInput {
+        private int[] nums;
+        private int target;
+
+        public TwoSumInput(int[] nums, int target) {
+            this.nums = nums;
+            this.target = target;
+        }
+
+        public int[] getNums() {
+            return nums;
+        }
+
+        public int getTarget() {
+            return target;
+        }
+    }
 
