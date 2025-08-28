@@ -1,20 +1,18 @@
 package com.amediaa.problems;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSum extends Problem<TwoSumData> {
+public class TwoSum extends Problem<int[], int[]> {
 
     public TwoSum() {
-        super(new TwoSumData[] {
-                new TwoSumData(new int[] {1, 2, 3, 5}, 7)
-        });
+        super(new int[] {1, 2}, new int[] {0, 1});
     }
 
     @Override
-    public void execute() {
-        solve();
+    int[] solution(int[] input) {
+        // TODO: fix hardcoing of target argument
+        return twoSum(input, 3);
     }
 
     // LeetCode 1
@@ -40,27 +38,5 @@ public class TwoSum extends Problem<TwoSumData> {
 
         return new int[] {0, 0};
     }
-
-    private void solve() {
-        System.out.println(Arrays.toString(
-                twoSum(testData[0].getSequence(), testData[0].getTarget())));
-    }
 }
 
-class TwoSumData{
-    private int[] sequence;
-    private int target;
-
-    TwoSumData(int[] sequence, int target) {
-        this.sequence = sequence;
-        this.target = target;
-    }
-
-    int getTarget() {
-        return target;
-    }
-
-    int[] getSequence() {
-        return sequence;
-    }
-}

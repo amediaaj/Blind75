@@ -1,19 +1,13 @@
 package com.amediaa.problems;
 
-public class BuySellStocks extends Problem<BuySellStocksData>{
+public class BuySellStocks extends Problem<int[], Integer>{
     public BuySellStocks() {
-        super(new BuySellStocksData[] {
-                new BuySellStocksData(new int[] {7,1,5,3,6,4})
-        });
+        super(new int[] {7,1,5,3,6,4}, 1);
     }
 
     @Override
-    public void execute() {
-        solve();
-    }
-
-    private void solve() {
-        System.out.println(maxProfit(testData[0].getSequence()));
+    Integer solution(int[] input) {
+        return maxProfit(input);
     }
 
     // LeetCode 121

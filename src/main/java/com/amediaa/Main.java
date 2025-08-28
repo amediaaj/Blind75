@@ -1,10 +1,8 @@
 package com.amediaa;
 
-import com.amediaa.challenges.GenericsChallenge;
-import com.amediaa.demos.Comparables;
-import com.amediaa.demos.Iterators;
 import com.amediaa.problems.BuySellStocks;
 import com.amediaa.problems.ContainsDuplicate;
+import com.amediaa.problems.ProductExceptSelf;
 import com.amediaa.problems.TwoSum;
 
 public class Main {
@@ -13,9 +11,10 @@ public class Main {
         // demo(new Iterators());
         // demo(new Generics());
 
-        // demo(new TwoSum());
-        // demo(new BuySellStocks());
+        demo(new TwoSum());
+        demo(new BuySellStocks());
         demo(new ContainsDuplicate());
+        demo(new ProductExceptSelf());
 
         // demo(new GenericsChallenge());
         // demo(new Comparables());

@@ -1,27 +1,16 @@
 package com.amediaa.problems;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ContainsDuplicate extends Problem<ContainsDuplicateData>{
+public class ContainsDuplicate extends Problem<int[], Boolean>{
     public ContainsDuplicate() {
-        super(new ContainsDuplicateData[] {
-                new ContainsDuplicateData(new int[] {1,2,3,1}, true)
-        });
+        super(new int[] {1,2,3,1}, true);
     }
 
     @Override
-    public void execute() {
-        solve();
-    }
-
-    private void solve() {
-        ContainsDuplicateData data = testData[0];
-        int[] input = data.getInput();
-        boolean expected = data.getExpected();
-        boolean output = containsDuplicate(input);
-        System.out.printf("Input: %s Output: %s Expected: %s", Arrays.toString(input), output, expected);
+    Boolean solution(int[] input) {
+        return containsDuplicate(input);
     }
 
     // 217.Contains Duplicate
@@ -37,12 +26,6 @@ public class ContainsDuplicate extends Problem<ContainsDuplicateData>{
         }
 
         return false;
-    }
-}
-
-class ContainsDuplicateData extends ProblemData<int[], Boolean>{
-    public ContainsDuplicateData(int[] nums, boolean expected) {
-        super(nums, expected);
     }
 }
 
