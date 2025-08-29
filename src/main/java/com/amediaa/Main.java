@@ -13,6 +13,7 @@ public class Main {
         demo(new ContainsDuplicate());
         demo(new ProductExceptSelf());
         demo(new MaxSubArray());
+        demo(new MaxProduct());
 
         // demo(new GenericsChallenge());
         // demo(new Comparables());

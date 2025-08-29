@@ -18,7 +18,7 @@ public class MaxSubArray extends Problem<int[], Integer>{
     }
 
     public MaxSubArray() {
-        super(new int[] {-2,1,-3,4,-1,2,1,-5,4}, 6);
+        super(new int[] {-2, 1,-3,4,-1,2,1,-5,4}, 6);
     }
 
     @Override

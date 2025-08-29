@@ -19,6 +19,6 @@ public abstract class Problem<T, S> implements Demo {
     public void execute() {
         S output = solution(input);
         // TODO: Fix printing of input, output, and expected
-        System.out.printf("Input: %s Output: %s Expected: %s", input, output, expected);
+        System.out.printf("Input: %s Output: %s Expected: %s%n", input, output, expected);
     }
 }
