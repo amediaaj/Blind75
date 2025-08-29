@@ -1,14 +1,16 @@
 package com.amediaa.problems;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class TwoSum extends Problem<TwoSumInput, int[]> {
     public TwoSum() {
-        super(new TwoSumInput(
+        super("1. Two Sum", List.of(new TwoSumInput(
                 new int[] {1, 2},
                 3
-        ), new int[] {0, 1});
+        )), List.of(new int[] {1, 0}));
     }
 
     @Override
@@ -56,6 +58,11 @@ public class TwoSum extends Problem<TwoSumInput, int[]> {
 
         public int getTarget() {
             return target;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("{ nums: %s, target: %d }", Arrays.toString(nums), target);
         }
     }
 

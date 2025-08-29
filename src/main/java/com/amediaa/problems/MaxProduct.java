@@ -1,6 +1,14 @@
 package com.amediaa.problems;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class MaxProduct extends Problem<int[], Integer>{
+
+    public MaxProduct() {
+        super("152. Maximum Product in Subarray",List.of(new int[] {2,3,-2,4}), List.of(6));
+    }
+
     public int maxProduct(int[] nums) {
         if(nums.length == 0) return 0;
 
@@ -9,7 +17,7 @@ public class MaxProduct extends Problem<int[], Integer>{
 
         // Start loop at second element
         for(int i = 1; i < nums.length; i++) {
-            // Assignt current element
+            // Assign current element
             int cur = nums[i];
 
             // Store the max in a temporary variable
@@ -29,10 +37,6 @@ public class MaxProduct extends Problem<int[], Integer>{
 
         // Return the product
         return result;
-    }
-
-    public MaxProduct() {
-        super(new int[] {2,3,-2,4}, 6);
     }
 
     @Override

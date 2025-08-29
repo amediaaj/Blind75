@@ -1,8 +1,10 @@
 package com.amediaa.problems;
 
+import java.util.List;
+
 public class BuySellStocks extends Problem<int[], Integer>{
     public BuySellStocks() {
-        super(new int[] {7,1,5,3,6,4}, 1);
+        super("121. Best Time to Buy and Sell Stock", List.of(new int[] {7,1,5,3,6,4}), List.of(5));
     }
 
     @Override

@@ -14,6 +14,7 @@ public class Main {
         demo(new ProductExceptSelf());
         demo(new MaxSubArray());
         demo(new MaxProduct());
+        demo(new FindMin());
 
         // demo(new GenericsChallenge());
         // demo(new Comparables());

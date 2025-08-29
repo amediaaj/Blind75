@@ -1,11 +1,12 @@
 package com.amediaa.problems;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class ContainsDuplicate extends Problem<int[], Boolean>{
     public ContainsDuplicate() {
-        super(new int[] {1,2,3,1}, true);
+        super("217. Contains Duplicate", List.of(new int[] {1,2,3,1}), List.of(true));
     }
 
     @Override

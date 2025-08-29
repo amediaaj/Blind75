@@ -1,8 +1,10 @@
 package com.amediaa.problems;
 
+import java.util.List;
+
 public class ProductExceptSelf extends Problem<int[], int[]> {
     public ProductExceptSelf() {
-        super(new int[] {1, 2, 3, 4}, new int[] {24, 12, 8, 6});
+        super("238. Product of Array Except Self", List.of(new int[] {1, 2, 3, 4}), List.of(new int[] {24, 12, 8, 6}));
     }
 
     @Override
