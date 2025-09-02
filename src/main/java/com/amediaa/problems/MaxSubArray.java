@@ -5,7 +5,7 @@ import java.util.List;
 public class MaxSubArray extends Problem<int[], Integer>{
 
     public MaxSubArray() {
-        super("53. Maximum subarray", List.of(new int[] {-2, 1,-3,4,-1,2,1,-5,4}), List.of(6));
+        super("53. Maximum Subarray", List.of(new int[] {-2, 1,-3,4,-1,2,1,-5,4}), List.of(6));
     }
 
     public int maxSubArray(int[] nums) {

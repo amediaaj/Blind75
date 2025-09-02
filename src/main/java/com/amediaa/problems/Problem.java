@@ -53,15 +53,10 @@ public abstract class Problem<T, S> implements Demo {
         if (obj instanceof byte[]) return Arrays.toString((byte[]) obj);
         if (obj instanceof Object[]) return Arrays.deepToString((Object[]) obj);
 
-        if (obj instanceof Collection || obj instanceof Map) {
-            return obj.toString();
-        }
-
         return obj.toString();
     }
 
-    @SuppressWarnings("unchecked")
-    private boolean isEqual(S output, S expected) {
+    protected boolean isEqual(S output, S expected) {
         if (output == null || expected == null) {
             return output == expected;
         }

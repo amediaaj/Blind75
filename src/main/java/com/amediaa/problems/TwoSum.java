@@ -43,26 +43,26 @@ public class TwoSum extends Problem<TwoSumInput, int[]> {
     }
 }
 
-    class TwoSumInput {
-        private int[] nums;
-        private int target;
+class TwoSumInput {
+    private int[] nums;
+    private int target;
 
-        public TwoSumInput(int[] nums, int target) {
-            this.nums = nums;
-            this.target = target;
-        }
-
-        public int[] getNums() {
-            return nums;
-        }
-
-        public int getTarget() {
-            return target;
-        }
-
-        @Override
-        public String toString() {
-            return String.format("{ nums: %s, target: %d }", Arrays.toString(nums), target);
-        }
+    public TwoSumInput(int[] nums, int target) {
+        this.nums = nums;
+        this.target = target;
     }
+
+    public int[] getNums() {
+        return nums;
+    }
+
+    public int getTarget() {
+        return target;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("{ nums: %s, target: %d }", Arrays.toString(nums), target);
+    }
+}
 

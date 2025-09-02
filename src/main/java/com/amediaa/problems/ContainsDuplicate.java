@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class ContainsDuplicate extends Problem<int[], Boolean>{
     public ContainsDuplicate() {
-        super("217. Contains Duplicate", List.of(new int[] {1,2,3,1}), List.of(true));
+        super("217. Contains Duplicate", List.of(new int[] {1,2,3,1}, new int[]{20, 21, 22, 23, 24, 25}), List.of(true, false));
     }
 
     @Override
