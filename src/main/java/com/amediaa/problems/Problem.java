@@ -8,15 +8,15 @@ public abstract class Problem<T, S> implements Demo {
 
     private final String name;
     private final List<T> inputs;
-    private final List<S> expecteds;
+    private final List<S> expectedOutputs;
 
-    public Problem(String name, List<T> inputs, List<S> expecteds) {
+    public Problem(String name, List<T> inputs, List<S> expectedOutputs) {
         this.name = name;
-        if (inputs.size() != expecteds.size()) {
+        if (inputs.size() != expectedOutputs.size()) {
             throw new IllegalArgumentException("Inputs and expected outputs must have the same size.");
         }
         this.inputs = inputs;
-        this.expecteds = expecteds;
+        this.expectedOutputs = expectedOutputs;
     }
 
     // Each subclass must implement this
@@ -27,7 +27,7 @@ public abstract class Problem<T, S> implements Demo {
         System.out.println(name);
         for (int i = 0; i < inputs.size(); i++) {
             T input = inputs.get(i);
-            S expected = expecteds.get(i);
+            S expected = expectedOutputs.get(i);
             S output = solution(input);
 
             System.out.printf("Test Case %d:%n", i + 1);
