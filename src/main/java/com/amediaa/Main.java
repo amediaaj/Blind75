@@ -18,11 +18,11 @@ public class Main {
 //        demo(new MaxSubArray());
 //        demo(new MaxProduct());
 //        demo(new FindMin());
-//        demo(new ThreeSum());
+        demo(new ThreeSum());
 
 //        demo(new GenericsChallenge());
 //        demo(new Comparables());
-        demo(new ImmutableLists());
+//        demo(new ImmutableLists());
     }
 
     private static void demo(Demo demo) {
