@@ -66,15 +66,15 @@ public abstract class Problem<T, S> implements Demo {
 
         if (outClass.isArray() && expClass.isArray()) {
             return switch (output) {
-                case Object[] s when expected instanceof Object[] e -> Arrays.deepEquals(s, (Object[]) expected);
-                case int[] s    when expected instanceof int[]    e -> Arrays.equals(s, (int[]) expected);
-                case long[] s   when expected instanceof long[]   e -> Arrays.equals(s, (long[]) expected);
-                case double[] s when expected instanceof double[] e -> Arrays.equals(s, (double[]) expected);
-                case boolean[] s when expected instanceof boolean[] e -> Arrays.equals(s, (boolean[]) expected);
-                case char[] s   when expected instanceof char[]   e -> Arrays.equals(s, (char[]) expected);
-                case byte[] s   when expected instanceof byte[]   e -> Arrays.equals(s, (byte[]) expected);
-                case float[] s  when expected instanceof float[]  e -> Arrays.equals(s, (float[]) expected);
-                case short[] s  when expected instanceof short[]  e -> Arrays.equals(s, (short[]) expected);
+                case Object[] s when expected instanceof Object[] e -> Arrays.deepEquals(s, e);
+                case int[] s    when expected instanceof int[]    e -> Arrays.equals(s, e);
+                case long[] s   when expected instanceof long[]   e -> Arrays.equals(s, e);
+                case double[] s when expected instanceof double[] e -> Arrays.equals(s, e);
+                case boolean[] s when expected instanceof boolean[] e -> Arrays.equals(s, e);
+                case char[] s   when expected instanceof char[]   e -> Arrays.equals(s, e);
+                case byte[] s   when expected instanceof byte[]   e -> Arrays.equals(s, e);
+                case float[] s  when expected instanceof float[]  e -> Arrays.equals(s, e);
+                case short[] s  when expected instanceof short[]  e -> Arrays.equals(s, e);
                 default -> false;
             };
         }
