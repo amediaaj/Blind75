@@ -1,31 +1,21 @@
 package com.amediaa;
 
-import com.amediaa.problems.ClimbStairs;
+import com.amediaa.demos.FunctionalInterfaces;
+import com.amediaa.demos.Generics;
+import com.amediaa.problems.TwoSum;
+
+import java.util.List;
 
 public class Main {
-
     public static void main(String[] args) {
-        // demo(new Iterators());
-        // demo(new Generics());
+        DemoRunner runner = new DemoRunner();
 
-//        demo(new TwoSum());
-//        demo(new BuySellStocks());
-//        demo(new ContainsDuplicate());
-//        demo(new ProductExceptSelf());
-//        demo(new MaxSubArray());
-//        demo(new MaxProduct());
-//        demo(new FindMin());
-//        demo(new ThreeSum());
-//        demo(new MaxArea());
-        demo(new ClimbStairs());
+        runner.addFactories(List.of(
+                Generics::new,
+                FunctionalInterfaces::new,
+                TwoSum::new
+        ));
 
-//        demo(new GenericsChallenge());
-//        demo(new Comparables());
-//        demo(new ImmutableLists());
+        runner.runAll();
     }
-
-    private static void demo(Demo demo) {
-        demo.execute();
-    }
-
 }

@@ -39,21 +39,21 @@ public abstract class Problem<T, S> implements Demo {
         }
     }
 
-    // Smart stringification for different data types
     protected String stringify(Object obj) {
         if (obj == null) return "null";
 
-        if (obj instanceof int[]) return Arrays.toString((int[]) obj);
-        if (obj instanceof long[]) return Arrays.toString((long[]) obj);
-        if (obj instanceof double[]) return Arrays.toString((double[]) obj);
-        if (obj instanceof boolean[]) return Arrays.toString((boolean[]) obj);
-        if (obj instanceof char[]) return Arrays.toString((char[]) obj);
-        if (obj instanceof float[]) return Arrays.toString((float[]) obj);
-        if (obj instanceof short[]) return Arrays.toString((short[]) obj);
-        if (obj instanceof byte[]) return Arrays.toString((byte[]) obj);
-        if (obj instanceof Object[]) return Arrays.deepToString((Object[]) obj);
-
-        return obj.toString();
+        return switch (obj) {
+            case int[] s     -> Arrays.toString(s);
+            case long[] s    -> Arrays.toString(s);
+            case double[] s  -> Arrays.toString(s);
+            case boolean[] s -> Arrays.toString(s);
+            case char[] s    -> Arrays.toString(s);
+            case float[] s   -> Arrays.toString(s);
+            case short[] s   -> Arrays.toString(s);
+            case byte[] s    -> Arrays.toString(s);
+            case Object[] s  -> Arrays.deepToString(s);
+            default          -> obj.toString();
+        };
     }
 
     protected boolean isEqual(S output, S expected) {
@@ -61,26 +61,25 @@ public abstract class Problem<T, S> implements Demo {
             return output == expected;
         }
 
-        if (output.getClass().isArray() && expected.getClass().isArray()) {
-            if (output instanceof Object[] && expected instanceof Object[]) {
-                return Arrays.deepEquals((Object[]) output, (Object[]) expected);
-            } else if (output instanceof int[] && expected instanceof int[]) {
-                return Arrays.equals((int[]) output, (int[]) expected);
-            } else if (output instanceof long[] && expected instanceof long[]) {
-                return Arrays.equals((long[]) output, (long[]) expected);
-            } else if (output instanceof double[] && expected instanceof double[]) {
-                return Arrays.equals((double[]) output, (double[]) expected);
-            } else if (output instanceof boolean[] && expected instanceof boolean[]) {
-                return Arrays.equals((boolean[]) output, (boolean[]) expected);
-            } else if (output instanceof char[] && expected instanceof char[]) {
-                return Arrays.equals((char[]) output, (char[]) expected);
-            } else if (output instanceof byte[] && expected instanceof byte[]) {
-                return Arrays.equals((byte[]) output, (byte[]) expected);
-            } else if (output instanceof float[] && expected instanceof float[]) {
-                return Arrays.equals((float[]) output, (float[]) expected);
-            }
+        Class<?> outClass = output.getClass();
+        Class<?> expClass = expected.getClass();
+
+        if (outClass.isArray() && expClass.isArray()) {
+            return switch (output) {
+                case Object[] s when expected instanceof Object[] e -> Arrays.deepEquals(s, (Object[]) expected);
+                case int[] s    when expected instanceof int[]    e -> Arrays.equals(s, (int[]) expected);
+                case long[] s   when expected instanceof long[]   e -> Arrays.equals(s, (long[]) expected);
+                case double[] s when expected instanceof double[] e -> Arrays.equals(s, (double[]) expected);
+                case boolean[] s when expected instanceof boolean[] e -> Arrays.equals(s, (boolean[]) expected);
+                case char[] s   when expected instanceof char[]   e -> Arrays.equals(s, (char[]) expected);
+                case byte[] s   when expected instanceof byte[]   e -> Arrays.equals(s, (byte[]) expected);
+                case float[] s  when expected instanceof float[]  e -> Arrays.equals(s, (float[]) expected);
+                case short[] s  when expected instanceof short[]  e -> Arrays.equals(s, (short[]) expected);
+                default -> false;
+            };
         }
 
         return output.equals(expected);
     }
+
 }

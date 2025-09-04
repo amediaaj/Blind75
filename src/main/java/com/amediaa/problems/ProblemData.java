@@ -1,5 +1,6 @@
 package com.amediaa.problems;
 
+// TODO: Currently not using this class.
 public abstract class ProblemData<T, S> {
     private final T input;
     private final S expected;
