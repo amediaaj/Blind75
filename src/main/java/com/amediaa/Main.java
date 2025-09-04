@@ -1,10 +1,6 @@
 package com.amediaa;
 
-import com.amediaa.challenges.GenericsChallenge;
-import com.amediaa.demos.Comparables;
-import com.amediaa.demos.ImmutableLists;
-import com.amediaa.problems.MaxArea;
-import com.amediaa.problems.ThreeSum;
+import com.amediaa.problems.ClimbStairs;
 
 public class Main {
 
@@ -20,7 +16,8 @@ public class Main {
 //        demo(new MaxProduct());
 //        demo(new FindMin());
 //        demo(new ThreeSum());
-        demo(new MaxArea());
+//        demo(new MaxArea());
+        demo(new ClimbStairs());
 
 //        demo(new GenericsChallenge());
 //        demo(new Comparables());
