@@ -29,15 +29,3 @@ public class BuySellStocks extends Problem<int[], Integer>{
         return profit;
     }
 }
-
-class BuySellStocksData {
-    private int[] sequence;
-
-    BuySellStocksData(int[] sequence) {
-        this.sequence = sequence;
-    }
-
-    public int[] getSequence() {
-        return sequence;
-    }
-}
