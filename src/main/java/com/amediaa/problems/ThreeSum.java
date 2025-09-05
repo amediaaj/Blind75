@@ -1,7 +1,5 @@
 package com.amediaa.problems;
 
-import com.amediaa.common.Problem;
-
 import java.util.*;
 
 public class ThreeSum extends Problem<int[], List<List<Integer>>> {

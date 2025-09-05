@@ -1,4 +1,6 @@
-package com.amediaa.common;
+package com.amediaa.problems;
+
+import com.amediaa.common.Demo;
 
 import java.util.*;
 
