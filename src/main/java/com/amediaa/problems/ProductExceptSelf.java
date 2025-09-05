@@ -1,5 +1,7 @@
 package com.amediaa.problems;
 
+import com.amediaa.common.Problem;
+
 import java.util.List;
 
 public class ProductExceptSelf extends Problem<int[], int[]> {

@@ -1,6 +1,4 @@
-package com.amediaa;
-
-import com.amediaa.demos.DemoFactory;
+package com.amediaa.common;
 
 import java.util.ArrayList;
 import java.util.List;

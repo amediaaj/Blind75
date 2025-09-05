@@ -1,6 +1,4 @@
-package com.amediaa.demos;
-
-import com.amediaa.Demo;
+package com.amediaa.common;
 
 @FunctionalInterface
 public interface DemoFactory {

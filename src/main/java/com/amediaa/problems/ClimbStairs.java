@@ -1,5 +1,7 @@
 package com.amediaa.problems;
 
+import com.amediaa.common.Problem;
+
 import java.util.List;
 
 public class ClimbStairs extends Problem<Integer, Integer> {
@@ -19,12 +21,12 @@ public class ClimbStairs extends Problem<Integer, Integer> {
 
         // Every step's ways is summation of ways of previous two steps
         for (int i = 3; i <= n; i++) {
-            int total = one + two;  // Current step = sum of previous two
+            int total = one + two;
             one = two;              // Shift window forward
             two = total;
         }
 
-        return two;  // Result is the number of ways to climb n stairs
+        return two;
     }
 
     @Override

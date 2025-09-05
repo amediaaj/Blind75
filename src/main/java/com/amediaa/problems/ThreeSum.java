@@ -1,9 +1,10 @@
 package com.amediaa.problems;
 
-import java.lang.reflect.Array;
+import com.amediaa.common.Problem;
+
 import java.util.*;
 
-public class ThreeSum extends Problem<int[], List<List<Integer>>>{
+public class ThreeSum extends Problem<int[], List<List<Integer>>> {
     public ThreeSum() {
         super("15. 3Sum", List.of(new int[] {-1,0,1,2,-1,-4}), List.of(List.of(List.of(-1,-1,2), List.of(-1,0,1))));
     }

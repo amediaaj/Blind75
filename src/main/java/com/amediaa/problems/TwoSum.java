@@ -1,5 +1,7 @@
 package com.amediaa.problems;
 
+import com.amediaa.common.Problem;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -18,23 +20,16 @@ public class TwoSum extends Problem<TwoSumInput, int[]> {
         return twoSum(input.getNums(), input.getTarget());
     }
 
-    // LeetCode 1
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
 
-        // Loop over all elements
         for(int i = 0; i < nums.length; i++) {
 
-            // Calculate target - element
             int diff = target - nums[i];
 
-            // If map contains difference
             if(map.containsKey(diff)) {
-                // Then the matching number was already encountered
-                // So return current index, and matching number index
                 return new int[] { i , map.get(diff)};
             } else {
-                // Otherwise place the current element and index in the map
                 map.put(nums[i], i);
             }
         }

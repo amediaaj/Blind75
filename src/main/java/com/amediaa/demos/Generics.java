@@ -1,6 +1,6 @@
 package com.amediaa.demos;
 
-import com.amediaa.Demo;
+import com.amediaa.common.Demo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,6 @@ record Affiliation(String name, String type, String countryCode) {
 }
 public class Generics implements Demo {
 
-    // T upperbound is Player, S no upperbound
     class Team<T extends Player, S> {
         private String teamName;
         private List<T> teamMembers = new ArrayList<>();

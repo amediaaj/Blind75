@@ -1,6 +1,5 @@
-package com.amediaa.problems;
+package com.amediaa.common;
 
-import com.amediaa.Demo;
 import java.util.*;
 
 // Abstract base class for problems
@@ -19,7 +18,6 @@ public abstract class Problem<T, S> implements Demo {
         this.expectedOutputs = expectedOutputs;
     }
 
-    // Each subclass must implement this
     abstract S solution(T input);
 
     @Override

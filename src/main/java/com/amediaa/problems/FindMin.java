@@ -1,8 +1,10 @@
 package com.amediaa.problems;
 
+import com.amediaa.common.Problem;
+
 import java.util.List;
 
-public class FindMin extends Problem<int[], Integer>{
+public class FindMin extends Problem<int[], Integer> {
 
     public FindMin() {
         super("153. Find Minimum in Rotated Sorted Array", List.of(new int[] {3,4,5,1,2}), List.of(1));

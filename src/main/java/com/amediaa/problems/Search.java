@@ -1,9 +1,11 @@
 package com.amediaa.problems;
 
+import com.amediaa.common.Problem;
+
 import java.util.Arrays;
 import java.util.List;
 
-public class Search extends Problem<SearchInput, Integer>{
+public class Search extends Problem<SearchInput, Integer> {
     public Search() {
         super("33. Search in Rotated Sorted Array", List.of(new SearchInput(
                 new int[] {4, 5, 6, 7, 0, 1, 2},

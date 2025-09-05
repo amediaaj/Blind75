@@ -1,8 +1,10 @@
 package com.amediaa.problems;
 
+import com.amediaa.common.Problem;
+
 import java.util.List;
 
-public class MaxProduct extends Problem<int[], Integer>{
+public class MaxProduct extends Problem<int[], Integer> {
 
     public MaxProduct() {
         super("152. Maximum Product in Subarray",List.of(new int[] {2,3,-2,4}), List.of(6));

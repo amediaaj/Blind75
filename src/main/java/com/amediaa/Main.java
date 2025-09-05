@@ -1,5 +1,6 @@
 package com.amediaa;
 
+import com.amediaa.common.DemoRunner;
 import com.amediaa.demos.FunctionalInterfaces;
 import com.amediaa.demos.Generics;
 import com.amediaa.problems.TwoSum;

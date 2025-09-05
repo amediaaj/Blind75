@@ -1,4 +1,4 @@
-package com.amediaa.problems;
+package com.amediaa.common;
 
 // TODO: Currently not using this class.
 public abstract class ProblemData<T, S> {

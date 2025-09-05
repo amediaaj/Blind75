@@ -1,11 +1,10 @@
 package com.amediaa.challenges;
 
-import com.amediaa.Demo;
+import com.amediaa.common.Demo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class GenericsChallenge implements Demo {
     @Override

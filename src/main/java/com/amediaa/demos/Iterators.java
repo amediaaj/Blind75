@@ -1,6 +1,6 @@
 package com.amediaa.demos;
 
-import com.amediaa.Demo;
+import com.amediaa.common.Demo;
 
 import java.util.*;
 
