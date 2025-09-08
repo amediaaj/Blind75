@@ -1,9 +1,9 @@
 package com.amediaa;
 
 import com.amediaa.common.DemoRunner;
-import com.amediaa.demos.FunctionalInterfaces;
-import com.amediaa.demos.Generics;
-import com.amediaa.problems.TwoSum;
+import com.amediaa.problems.FindKthSmallest;
+import com.amediaa.problems.StreamMax;
+
 
 import java.util.List;
 
@@ -12,9 +12,8 @@ public class Main {
         DemoRunner runner = new DemoRunner();
 
         runner.addFactories(List.of(
-                Generics::new,
-                FunctionalInterfaces::new,
-                TwoSum::new
+                FindKthSmallest::new, //Heap
+                StreamMax::new // Heap
         ));
 
         runner.runAll();
