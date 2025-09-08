@@ -10,34 +10,17 @@ public class Heap {
         this.heap = new ArrayList<>();
     }
 
-    // Constructor that builds a heap from an existing array
+    // "Heapify" constructor
     public Heap(int[] arr) {
-        // 1. Create an internal ArrayList to hold heap values
         this.heap = new ArrayList<>();
 
-        // 2. Copy all elements from the input array into the heap list.
-        //    At this point, 'heap' is just a raw array, not a valid heap yet.
         for (int val : arr) {
             heap.add(val);
         }
 
-        // 3. Perform "heapify" (bottom-up construction).
-        //    We start from the last non-leaf node and work backwards to the root.
-        //
-        //    Why start at heap.size()/2 - 1?
-        //    --------------------------------
-        //    - In a binary heap (array-based), all nodes after index n/2 - 1
-        //      are leaf nodes (they have no children).
-        //    - Leaf nodes automatically satisfy the heap property,
-        //      so we only need to fix internal nodes (parents).
-        //
-        //    For each parent node, we call sinkDown to push it into
-        //    the correct place, ensuring the heap property holds.
         for (int i = heap.size() / 2 - 1; i >= 0; i--) {
-            sinkDown(i);  // pushes down element at index 'i' if needed
+            sinkDown(i);
         }
-
-        // After this loop finishes, the entire array is a valid Max Heap.
     }
 
     public List<Integer> getHeap() {
