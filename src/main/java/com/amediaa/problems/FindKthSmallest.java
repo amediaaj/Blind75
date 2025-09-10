@@ -1,6 +1,8 @@
 package com.amediaa.problems;
 
 import com.amediaa.datastructures.Heap;
+
+import java.util.Arrays;
 import java.util.List;
 
 public class FindKthSmallest extends Problem<FindKthSmallest.FindKthSmallestInput, Integer> {
@@ -56,6 +58,11 @@ public class FindKthSmallest extends Problem<FindKthSmallest.FindKthSmallestInpu
 
         public int getK() {
             return k;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("{ nums: %s, k: %d }", Arrays.toString(nums), k);
         }
     }
 }
