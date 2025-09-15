@@ -1,2 +1,1 @@
-com.amediaa.problems.FindKthSmallest
-com.amediaa.problems.BuySellStocks
+com.amediaa.challenges.LambdaExpressionChallenge
