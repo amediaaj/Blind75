@@ -1,1 +1,1 @@
-com.amediaa.challenges.LambdaExpressionChallenge
+com.amediaa.demos.cards.CardsDemo
