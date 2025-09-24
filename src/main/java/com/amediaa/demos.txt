@@ -1,1 +1,1 @@
-com.amediaa.demos.cards.CardsDemo
+com.amediaa.demos.playingcards.PlayingCardsDemo
