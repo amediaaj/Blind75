@@ -1,12 +1,14 @@
 package com.amediaa.datastructures;
 
+import com.amediaa.common.Demo;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 // TODO: implement remove
-public class BinarySearchTree {
+public class BinarySearchTree implements Demo {
     Node root;
 
     class Node {
@@ -65,27 +67,53 @@ public class BinarySearchTree {
 
     public List<Integer> BFS() {
         Node currentNode = root;
-
         Queue<Node> queue = new LinkedList<>();
-        ArrayList<Integer> results = new ArrayList<>();
-        // Add the entire node to queue
+        List<Integer> results = new ArrayList<>();
         queue.add(currentNode);
 
-        while(queue.size() > 0) {
+        while (queue.size() > 0) {
             currentNode = queue.remove();
-            // Add the node value to results
             results.add(currentNode.value);
 
-            if(currentNode.left != null) {
-                // Add the entire node to queue
+            if (currentNode.left != null) {
                 queue.add(currentNode.left);
             }
-            if(currentNode.right != null) {
-                // Add the entire node to queue
+            if (currentNode.right != null) {
                 queue.add(currentNode.right);
             }
         }
 
         return results;
+    }
+
+    @Override
+    public void execute() {
+        // Demo BST
+//        BinarySearchTree myBST = new BinarySearchTree();
+//
+//        System.out.println("Root = " + myBST.root);
+//
+//        myBST.insert(47);
+//        myBST.insert(21);
+//        myBST.insert(76);
+//        myBST.insert(18);
+//        myBST.insert(52);
+//        myBST.insert(82);
+//
+//        myBST.insert(27);
+//        System.out.println(myBST.root.left.right.value);
+
+        // Demo BFS
+        BinarySearchTree myBST = new BinarySearchTree();
+
+        myBST.insert(47);
+        myBST.insert(21);
+        myBST.insert(76);
+        myBST.insert(18);
+        myBST.insert(27);
+        myBST.insert(52);
+        myBST.insert(82);
+
+        System.out.println(myBST.BFS());
     }
 }

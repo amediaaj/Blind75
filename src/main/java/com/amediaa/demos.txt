@@ -1,1 +1,2 @@
-com.amediaa.demos.setsandmaps.SetsAndMapsDemo
+com.amediaa.datastructures.BinarySearchTree
+com.amediaa.datastructures.Heap

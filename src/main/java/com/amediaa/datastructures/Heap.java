@@ -1,9 +1,11 @@
 package com.amediaa.datastructures;
 
+import com.amediaa.common.Demo;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Heap {
+public class Heap implements Demo {
     private List<Integer> heap;
 
     public Heap() {
@@ -94,4 +96,22 @@ public class Heap {
         }
     }
 
+    @Override
+    public void execute() {
+        // Demo Heap
+        Heap myHeap = new Heap();
+        myHeap.insert(95);
+        myHeap.insert(75);
+        myHeap.insert(80);
+        myHeap.insert(55);
+        myHeap.insert(60);
+        myHeap.insert(50);
+        myHeap.insert(65);
+
+        System.out.println(myHeap.getHeap());
+
+        myHeap = new Heap(new int[] {65, 80, 75, 55, 95, 50, 60});
+
+        System.out.println(myHeap.getHeap());
+    }
 }
