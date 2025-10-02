@@ -1,2 +1,1 @@
-com.amediaa.datastructures.BinarySearchTree
-com.amediaa.datastructures.Heap
+com.amediaa.demos.collections.CollectionStoring
