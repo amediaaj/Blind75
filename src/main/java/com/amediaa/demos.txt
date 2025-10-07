@@ -1,1 +1,1 @@
-com.amediaa.demos.collections.CollectionStoring
+com.amediaa.demos.collections.ExtendingCollectionWithList
