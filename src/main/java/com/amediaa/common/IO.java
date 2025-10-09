@@ -9,5 +9,9 @@ public class IO {
     public static void println(Object obj) {
         System.out.println(obj);
     }
+
+    public static void printBorder() {
+        System.out.println("\n*******************************************************\n");
+    }
 }
 

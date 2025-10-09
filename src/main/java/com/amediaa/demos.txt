@@ -1,1 +1,1 @@
-com.amediaa.demos.collections.ExtendingCollectionWithList
+com.amediaa.demos.streams.IntermediateOps
