@@ -66,11 +66,11 @@ public class BinarySearchTree implements Demo {
     }
 
     public List<Integer> BFS() {
-        Node currentNode = root;
         Queue<Node> queue = new LinkedList<>();
         List<Integer> results = new ArrayList<>();
-        queue.add(currentNode);
 
+        Node currentNode = root;
+        queue.add(currentNode);
         while (queue.size() > 0) {
             currentNode = queue.remove();
             results.add(currentNode.value);
@@ -82,6 +82,66 @@ public class BinarySearchTree implements Demo {
                 queue.add(currentNode.right);
             }
         }
+
+        return results;
+    }
+
+    public List<Integer> DFSPreOrder() {
+        List<Integer> results = new ArrayList<>();
+
+        class Traverse {
+            Traverse(Node currentNode) {
+                results.add(currentNode.value);
+                if(currentNode.left != null) {
+                    new Traverse(currentNode.left);
+                }
+                if(currentNode.right != null) {
+                    new Traverse(currentNode.right);
+                }
+            }
+        }
+
+        new Traverse(root);
+
+        return results;
+    }
+
+    public List<Integer> DFSPostOrder() {
+        List<Integer> results = new ArrayList<>();
+
+        class Traverse {
+            Traverse(Node currentNode) {
+                if(currentNode.left != null) {
+                    new Traverse(currentNode.left);
+                }
+                if(currentNode.right != null) {
+                    new Traverse(currentNode.right);
+                }
+                results.add(currentNode.value);
+            }
+        }
+
+        new Traverse(root);
+
+        return results;
+    }
+
+    public List<Integer> DFSInOrder() {
+        List<Integer> results = new ArrayList<>();
+
+        class Traverse {
+            Traverse(Node currentNode) {
+                if(currentNode.left != null) {
+                    new Traverse(currentNode.left);
+                }
+                results.add(currentNode.value);
+                if(currentNode.right != null) {
+                    new Traverse(currentNode.right);
+                }
+            }
+        }
+
+        new Traverse(root);
 
         return results;
     }
@@ -115,5 +175,8 @@ public class BinarySearchTree implements Demo {
         myBST.insert(82);
 
         System.out.println(myBST.BFS());
+        System.out.println(myBST.DFSPreOrder());
+        System.out.println(myBST.DFSPostOrder());
+        System.out.println(myBST.DFSInOrder());
     }
 }
