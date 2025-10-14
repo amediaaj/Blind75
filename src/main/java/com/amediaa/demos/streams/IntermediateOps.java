@@ -208,6 +208,7 @@ public class IntermediateOps implements Demo {
 
         IO.printBorder();
 
+        // peek (debugging)
         strings = List.of("one", "two", "three", "four");
         List<String> result_list =
                 strings.stream()

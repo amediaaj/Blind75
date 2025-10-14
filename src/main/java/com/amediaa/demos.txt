@@ -1,1 +1,1 @@
-com.amediaa.demos.collections.MapsToStoreKeyValuePairs
+com.amediaa.demos.streams.CreatingStreams
